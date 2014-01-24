@@ -29,16 +29,18 @@
                 </div>
                 <div class="row">
                     <div style="text-align:center;">
-                        <button type="button" class="btn btn-primary" style="background-color:#75356A; border:none;font-size: 2.3em;">Candy<sup>&trade;</sup>a Name</button>
+                        <button id="ran" type="button" class="btn btn-primary" style="background-color:#75356A; border:none;font-size: 2.3em;">Candy<sup>&trade;</sup>a Name</button>
+                        <button type="button" class="btn btn-primary" style="background-color:#75356A; border:none;font-size: 2.3em;"><a>Tweet It</a></button>
                     </div>
                 </div>
                 <br/>
 
                 <div class="row" style="background-color:#C759DE">
-                    
+                        
                         <p class="text">Need a trade mark safe name for your next Candy<sup>&trade;</sup> Crush Saga<sup>&trade;</sup></p>
                         <p>Hit the button to generate a sweet new name.</p>
                         <p>
+                
                     
                 </div>
             </div>
@@ -47,17 +49,23 @@
        <!--  </div> -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-function ranRan(e){return Math.floor(Math.random()*(e-0+1)+0)}f=["candy","sweet","bonbon","confectionery","confit","hokum","jawbreaker","sweetmeat","cake","candy","confection","cookie","frozen treat","fruit","ice cream","pastry","pie","pudding","sweet","sweetcourse","tart","bonbon","candy","chocolate","confection","confectionery","delight","dessert","pudding","snack","sugarplum","sweetmeat","kandi","qändi","candi"];m=["crush","horde","gathering","huddle","jam","party","press","push","tumult","bang","bash","bat","belt","box","break","bruise","cane","castigate","clout","club","collide","crush","cudgel","flagellate","flail","flog","hammer","hit","knock","lambaste","lash","lick","mash","maul","pelt","pound","pummel","punch","punish","ram","rap","slap","slug","smack","spank","strike","swat","thrash","thresh","thump","thwack","trounce","wallop","whip","krush","krüsh"];l=["saga","adventure","chronicle","epic","legend","narrative","tale","yarn","soap opera","adventures","autobiography","bio","biog","close-up","confessions","diary","experiences","journal","letters","life","memoir","personal account","personal anecdote","personal narrative","picture","profile","résumé","saga","sketch"];$("button").click(function(){f_word=f[ranRan(f.length)];m_word=m[ranRan(m.length)];l_word=l[ranRan(l.length)];$("#1").text(f_word[0].toUpperCase()+f_word.substring(1));$("#2").text(m_word[0].toUpperCase()+m_word.substring(1));$("#3").text(l_word[0].toUpperCase()+l_word.substring(1))})
+function ranRan(e){return Math.floor(Math.random()*(e-0+1)+0)}f=["candy","sweet","bonbon","confectionery","confit","hokum","jawbreaker","sweetmeat","cake","candy","confection","cookie","frozen treat","fruit","ice cream","pastry","pie","pudding","sweet","sweetcourse","tart","bonbon","candy","chocolate","confection","confectionery","delight","dessert","pudding","snack","sugarplum","sweetmeat","kandi","qändi","candi"];m=["crush","horde","gathering","huddle","jam","party","press","push","tumult","bang","bash","bat","belt","box","break","bruise","cane","castigate","clout","club","collide","crush","cudgel","flagellate","flail","flog","hammer","hit","knock","lambaste","lash","lick","mash","maul","pelt","pound","pummel","punch","punish","ram","rap","slap","slug","smack","spank","strike","swat","thrash","thresh","thump","thwack","trounce","wallop","whip","krush","krüsh"];l=["saga","adventure","chronicle","epic","legend","narrative","tale","yarn","soap opera","adventures","autobiography","bio","biog","close-up","confessions","diary","experiences","journal","letters","life","memoir","personal account","personal anecdote","personal narrative","picture","profile","résumé","saga","sketch"];$("#ran").click(function(){f_word=f[ranRan(f.length)];m_word=m[ranRan(m.length)];l_word=l[ranRan(l.length)];$("#1").text(f_word[0].toUpperCase()+f_word.substring(1));$("#2").text(m_word[0].toUpperCase()+m_word.substring(1));$("#3").text(l_word[0].toUpperCase()+l_word.substring(1));
+  $('button > a').click(function(){
+    link = "https://twitter.com/share?url=http://candiednames.com/&hashtags=candyjam&text="+$("#1").text()+' '+ $("#2").text()+' '+$("#3").text();
+    $(this).attr({'href':link});
+  })
+
+})
 
 </script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-47463803-1', 'candiednames.com');
-  ga('send', 'pageview');
+  // ga('create', 'UA-47463803-1', 'candiednames.com');
+  // ga('send', 'pageview');
 
 </script>
 </body>
